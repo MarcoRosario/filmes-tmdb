@@ -12,8 +12,6 @@ onMounted(async () => {
   TVGenres.value = response.data.genres
 })
 </script>
-
-
 <template>
   <h1>Gêneros de filmes</h1>
   <ul>
@@ -28,4 +26,5 @@ onMounted(async () => {
       {{ genre.name }}
     </li>
   </ul>
+  
 </template>
