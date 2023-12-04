@@ -4,6 +4,11 @@ import api from '@/plugins/axios'
 import Loading from 'vue-loading-overlay'
 import { useGenreStore } from '@/stores/genre'
 
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
+
+
 const formatDate = (date) => new Date(date).toLocaleDateString('pt-BR')
 const movies = ref([])
 
@@ -11,6 +16,11 @@ const movies = ref([])
 //   const genero = genres.value.find((genre) => genre.id === id)
 //   return genero.name
 // }
+
+
+function openMovie(movieId) {
+  router.push({ name: 'MovieDetails', params: { movieId } });
+}
 
 const isLoading = ref(false)
 
@@ -167,3 +177,5 @@ onMounted(async () => {
   font-weight: bolder;
 }
 </style>
+
+

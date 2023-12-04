@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+
+
 const routes = [
   {
     path: '/',
@@ -15,7 +17,14 @@ const routes = [
     path: '/tv',
     name: 'TV',
     component: () => import('../views/TvView.vue')
-  }
+  },
+  {
+    path: '/movie/:movieId',
+    name: 'MovieDetails',
+    component: () => import('../views/MovieDetailsView.vue'),
+    props: true,
+  },
+  
 ]
 
 const router = createRouter({
@@ -23,4 +32,6 @@ const router = createRouter({
   routes
 })
 
+
 export default router
+
