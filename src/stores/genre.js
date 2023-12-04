@@ -7,7 +7,7 @@ export const useGenreStore = defineStore('genre', () => {
     genres: [],
     currentGenreId: null,
   });
-
+    
   const genres = computed(() => state.genres, state.currentGenreId);
   const getGenreName = (id) =>
     state.genres.find((genre) => genre.id === id).name;
@@ -28,5 +28,8 @@ export const useGenreStore = defineStore('genre', () => {
 
 
 
-export default useGenreStore;
+
+
+
+
 
